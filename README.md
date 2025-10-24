@@ -55,6 +55,7 @@ UPDATE nashville_housing
 SET PropertyAddress = TRIM(SUBSTRING_INDEX(PropertyAddress, ',', 1)),
     City = TRIM(SUBSTRING_INDEX(PropertyAddress, ',', -1));
 ---
+```sql
 
 ## Outcomes
 
