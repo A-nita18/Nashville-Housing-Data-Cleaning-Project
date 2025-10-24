@@ -40,8 +40,7 @@ The goal was to transform raw housing records into a clean, reliable dataset sui
 
 Some highlights from the SQL script (`Nashville data cleaning project.sql`):
 
-```sql
--- Example: Standardize date format
+```sql-- Example: Standardize date format
 UPDATE nashville_housing
 SET SaleDate = STR_TO_DATE(SaleDate, '%M %d, %Y');
 
@@ -54,8 +53,7 @@ ON n1.ParcelID = n2.ParcelID AND n1.UniqueID > n2.UniqueID;
 UPDATE nashville_housing
 SET PropertyAddress = TRIM(SUBSTRING_INDEX(PropertyAddress, ',', 1)),
     City = TRIM(SUBSTRING_INDEX(PropertyAddress, ',', -1));
----
-```sql
+--- ```sql
 
 ## Outcomes
 
