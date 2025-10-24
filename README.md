@@ -1,4 +1,3 @@
-# Nashville-Housing-Data-Cleaning-Project
 # Nashville Housing Data Cleaning Project
 
 This project focuses on cleaning and preparing housing market data from **Nashville, Tennessee** using **MySQL** and **Excel**.  
@@ -55,8 +54,9 @@ ON n1.ParcelID = n2.ParcelID AND n1.UniqueID > n2.UniqueID;
 UPDATE nashville_housing
 SET PropertyAddress = TRIM(SUBSTRING_INDEX(PropertyAddress, ',', 1)),
     City = TRIM(SUBSTRING_INDEX(PropertyAddress, ',', -1));
+---
 
-**## Outcomes**
+## Outcomes
 
 - Produced a **clean, consistent dataset** free from duplicates and structural issues.
 - Improved data reliability for future analytical or visualization work (e.g., Tableau, Power BI).
